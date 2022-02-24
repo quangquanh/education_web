@@ -10,14 +10,6 @@ const AdminController = require("../controller/AdminController")
 const Admin = require("../models/Admin")
 
 
-router.get("/create",(req,res)=>{
-    var admin = new Admin()
-    admin.name = "wang"
-    admin.password = "Cammich1308"
-    admin.save()
-    .then(()=>res.json(admin))
-})
-
 //render home
 router.get("/home", admin_auth_middleware, AdminController.admin_home)
 
