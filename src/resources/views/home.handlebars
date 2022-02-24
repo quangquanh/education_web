@@ -1,0 +1,28 @@
+<h2 style="padding: 50px;">Các khóa học: </h2>
+<div class="mt-4">
+    <div style="padding: 100px; padding-top: 10px;" class="row">
+        {{#each courses}}
+        <div class="col-sm-6 col-sm-4" style=" background-color: white; 
+        width: 360px; margin-left:10px;
+         margin-right: 5px;">
+            <div style="margin: 10px;">
+                <img style="height: 200px;" class="img-thumbnail" src="{{this.image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.name}}</h5>
+                    <p class="card-text">{{this.description}}</p>
+                    <p class="card-text">{{this.type}}</p>
+                    <div style="display: flex;flex-direction: row; margin-left: 40px;  ">
+                        <a href="/course/{{this.slug}}" style="height: 37px;" class="btn btn-primary">Học ngay</a>
+                        <br>
+                        <br>
+                        <form style="margin-left: 20px;" action="/home/{{this.slug}}/add" method="post">
+                            <button type="submit" style="height: 37px;" class="btn btn-primary">Thêm</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+

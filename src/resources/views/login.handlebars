@@ -1,0 +1,22 @@
+{{#if errs}}
+{{#each errs}}
+<div style="width: 500px;" class="alert alert-danger" role="alert">
+  {{this}}
+</div>
+{{/each}}
+
+{{/if}}
+<h3 style="margin-top:100px;margin-left: 640px;" >Login</h3 >
+<form style="width: 360px;height: 300px; margin-top: 50px; margin-left: 500px;margin-right: 500px; background-color: white;" action="" method="POST">
+<div style="margin: 30px;padding-top: 50px;">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input name="email" value="{{email}}" style="width: 300px;" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input name = "password" value="{{password}}" style="width: 300px;"  type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <button type="submit" class="btn btn-primary">Đăng Nhập</button>
+    <a href="/user/signup"><p>đăng ký nếu chưa có tài khoản</p></a>
+</div>
+</form>
+

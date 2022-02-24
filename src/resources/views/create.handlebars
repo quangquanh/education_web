@@ -1,0 +1,42 @@
+{{#if errs}}
+{{#each errs}}
+<div style="width: 500px;" class="alert alert-danger" role="alert">
+    {{this}}
+</div>
+{{/each}}
+
+{{/if}}
+
+<div style=" padding-top: 50px ; padding-left: 300px;">
+    <form action="/admins/create" method="POST" enctype="multipart/form-data" style="background-color: white; width: 800px;
+    height: 500px;
+     padding: 50px;
+     padding-left: 100px;
+     ">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Tên khóa học</label>
+            <input name="name" type="text" style="width:600px" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">thể loại</label>
+            <input name="type" type="text" style="width:600px" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp">
+        </div>
+
+        <div class="mb-3">
+            <div class="form-floating">
+                <textarea name="description" style="width:600px;height: 200px;" class="form-control"
+                    placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                <label for="floatingTextarea">Mô tả</label>
+            </div>
+        </div>
+
+        <div style="width:600px" class="input-group mb-3">
+            <input name="image" type="file" class="form-control" id="inputGroupFile02">
+            <label class="input-group-text" for="inputGroupFile02">Upload</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">lưu lại và quay về</button>
+    </form>
+</div>

@@ -1,0 +1,32 @@
+{{#if errs}}
+{{#each errs}}
+<div style="width: 500px;" class="alert alert-danger" role="alert">
+  {{this}}
+</div>
+{{/each}}
+
+{{/if}}
+<h3 style="margin-top:100px;margin-left: 640px;" >Sign up</h3 >
+
+<form style="width: 600px;height: 500px; margin: 100px; margin-top: 50px; margin-left: 400px;margin-right: 500px; background-color: white;" action="" method="POST" enctype="multipart/form-data" >
+<div style="padding: 50px;">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">name</label>
+        <input name = "name" value="{{value.name}}" style="width: 500px;" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input name="email" value="{{value.email}}" style="width: 500px;" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input name = "password" value="{{value.password}}" style="width: 500px;"  type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3 form-check">
+        <label class="form-check-label" for="exampleCheck1">avatar</label>
+        <br>
+        <input name = "avatar" type="file" >
+    </div>
+    <button type="submit" class="btn btn-primary">Đăng Ký</button>
+</div>
+</form>

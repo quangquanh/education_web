@@ -1,0 +1,38 @@
+{{#if errs}}
+{{#each errs}}
+<div style="width: 500px;" class="alert alert-danger" role="alert">
+    {{this}}
+</div>
+{{/each}}
+
+{{/if}}
+
+<div style=" padding-top: 50px ; padding-left: 300px;">
+    <form action="" method="POST" style="background-color: white; width: 800px;
+    height: 500px;
+     padding: 50px;
+     padding-left: 100px;
+     ">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">stt</label>
+            <input name="stt" value="{{video.stt}}" type="text" style="width:600px" class="form-control"
+                id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">tiêu đề</label>
+            <input name="name" value="{{video.name}}" type="text" style="width:600px" class="form-control"
+                id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">id youtube</label>
+            <input name="youtube_id" value="{{video.youtube_id}}" type="text" style="width:600px" class="form-control"
+                id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">bài đăng</label>
+            <textarea name="post" type="text" style="width:600px" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp">{{video.post}} </textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">lưu lại và quay về</button>
+    </form>
+</div>

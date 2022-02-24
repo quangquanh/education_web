@@ -1,0 +1,20 @@
+<div style="background-color: #3e4551; color: white;">
+  <div style="padding: 50px ;padding-left: 200px;">
+    <h3>Khóa học {{course.name}}</h3>
+  <p>Được tạo bởi: {{course.admin}} &nbsp &nbsp &nbsp &nbsp &nbsp Lượt xem: {{course.view}}</p>
+  <p>Nội dung khóa học: {{course.description}}</p>
+  </div>
+    </div>
+  <div style=" display: flex;flex-direction: row; margin: 100px ; margin-top: 10px;">
+
+   <img src="{{course.image}}" width="800px" height="400px" alt="ảnh khóa học">
+
+    <div style="background-color: white; width: 500px; margin-left: 30px;" class="list-group">
+      <a class="list-group-item list-group-item-action active" aria-current="true">
+        Danh sách bài học
+      </a>
+      {{#each videos}}
+      <a href="{{this.slug}}/{{this.stt}}" class="list-group-item list-group-item-action">{{this.stt}}.{{this.name}}</a>
+      {{/each}}
+  </div>
+</div>
