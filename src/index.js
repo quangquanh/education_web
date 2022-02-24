@@ -2,7 +2,7 @@ var express = require("express")
 var { engine } = require('express-handlebars');
 var path = require("path")
 var app = express()
-var port = 8000
+var port = process.env.PORT || 3000
 
 app.use(express.static('public'));
 
