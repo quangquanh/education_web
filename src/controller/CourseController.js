@@ -16,7 +16,7 @@ class CourseController {
     play(req, res, next) {
         Course.findOne({ slug: req.params.slug }).lean().populate("video").exec()
             .then((course) => {
-                Video.findOne({ stt: req.params.id }).lean()
+                Video.findOne({ _id: req.params.id }).lean()
                     .then((video) => {
                         var videos = course.video
                         videos.map((val) => val.slug = req.params.slug)
